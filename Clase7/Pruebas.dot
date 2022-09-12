@@ -1,0 +1,26 @@
+digraph G {
+node[shape=record]
+		//Agregar Nodos Rama
+R0x100b3d0[label="<C1>|9|<C2>"];
+R0x100b470[label="<C1>|3|<C2>|6|<C3>"];
+R0x100b510[label="0|1|2"];
+R0x100b710[label="4|5"];
+R0x100b370[label="7|8"];
+R0x100b430[label="<C1>|12|<C2>|15|<C3>|34|<C4>|223|<C5>"];
+R0x100b490[label="10|11"];
+R0x10004b0[label="13|14"];
+R0x100c260[label="16|17"];
+R0x100c180[label="55|67"];
+R0x100c020[label="225|227"];
+		//Agregar conexiones
+R0x100b3d0:C1->R0x100b470;
+R0x100b470:C1->R0x100b510;
+R0x100b470:C2->R0x100b710;
+R0x100b470:C3->R0x100b370;
+R0x100b3d0:C2->R0x100b430;
+R0x100b430:C1->R0x100b490;
+R0x100b430:C2->R0x10004b0;
+R0x100b430:C3->R0x100c260;
+R0x100b430:C4->R0x100c180;
+R0x100b430:C5->R0x100c020;
+}
