@@ -81,3 +81,24 @@ string ListaSimple::getDatos()
     }
     return "[\n " + out + "\n]";
 }
+
+string ListaSimple::Buscar(int id)
+{
+    if (Inicio == NULL)
+        return "El valor no se encuentra en la lista";
+
+    string out = "";
+    int contador = 0;
+    nodosimple *aux = Inicio;
+    while (aux != NULL)
+    {
+
+        if (aux->valor == id)
+        {
+            return "El id se encuntra en la posicion " + to_string(contador);
+        }
+        aux = aux->sig;
+        contador++;
+    }
+    return "El valor no se encuentra en la lista";
+}

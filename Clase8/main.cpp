@@ -44,7 +44,7 @@ public:
         {
             response << "{ "
                      << jsonkv("status", "ok") << ",\n"
-                     << jsonkv("Id_buscado", request.special["Id"]) << " }";
+                     << jsonkv("Id_buscado", pruebas.Buscar(atoi(request.special["Id"]))) << " }";
         }
     }
 
@@ -53,7 +53,7 @@ public:
         pruebas.InsertarEnOrden(atoi(request.special["Id"]));
         response << "{ "
                  << jsonkv("status", "ok") << ",\n"
-                 << jsonkv("Id_nuevo",request.special["Id"]) << " }";
+                 << jsonkv("Id_nuevo", request.special["Id"]) << " }";
     }
 
 private:

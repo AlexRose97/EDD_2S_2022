@@ -19,6 +19,7 @@ public:
     void InsertarFinal(int valor);
     void InsertarEnOrden(int valor);
     string getDatos();
+    string Buscar(int id);
 
 private:
 };
